@@ -24,7 +24,6 @@
   "homepage": "https://github.com/guumaster/roleando-bot#readme",
   "dependencies": {
     "dotenv": "4.0.0",
-    "node-twitterbot": "0.2.2",
     "twit": "2.2.5"
   }
 }
