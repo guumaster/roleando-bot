@@ -1,0 +1,30 @@
+{
+  "name": "roleando-bot",
+  "version": "1.0.0",
+  "description": "Un bot para inventar historias",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/guumaster/roleando-bot.git"
+  },
+  "keywords": [
+    "bot",
+    "roleando",
+    "rpg",
+    "generator"
+  ],
+  "author": "guumaster",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guumaster/roleando-bot/issues"
+  },
+  "homepage": "https://github.com/guumaster/roleando-bot#readme",
+  "dependencies": {
+    "dotenv": "4.0.0",
+    "node-twitterbot": "0.2.2",
+    "twit": "2.2.5"
+  }
+}
