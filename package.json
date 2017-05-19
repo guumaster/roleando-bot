@@ -23,7 +23,10 @@
   },
   "homepage": "https://github.com/guumaster/roleando-bot#readme",
   "dependencies": {
+    "@guumaster/rpgen": "1.2.2",
+    "axios": "0.16.1",
     "dotenv": "4.0.0",
+    "striptags": "3.0.1",
     "twit": "2.2.5"
   }
 }
