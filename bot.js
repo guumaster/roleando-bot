@@ -5,17 +5,20 @@ const rpgen = require('@guumaster/rpgen')
 const striptags = require('striptags')
 const Twitter = require('twit')
 
+const MAX_RETRIES = 100
+
 const API_URL = 'https://roleando.herokuapp.com'
 
 const TWITTER_GENERATORS = [
-  'BytfSUVS', // Profecias
+  'BytfSUVS',  // Profecias
   'Hy_JYs8yZ', // Graffitis
-  'SJfca2q4', // Dungeons
-  'ryhpUxVH', // Presagios
-  'rJZnFG74', // Destinos misticos
-  'Hk8Z2R9S', // Simbolos extraños
-  'rkdh21CR', // Garitos
-  'ryCnVMOb-' // Tramas cortas
+  'SJfca2q4',  // Dungeons
+  'ryhpUxVH',  // Presagios
+  'rJZnFG74',  // Destinos misticos
+  'Hk8Z2R9S',  // Simbolos extraños
+  'rkdh21CR',  // Garitos
+  'ryCnVMOb-', // Tramas cortas
+  'r1wBUHu-Z'  // Secretos locales
 ]
 
 const pick = arr => arr[Math.floor(Math.random() * arr.length)]
@@ -42,14 +45,32 @@ const loadGenerator = id => {
     })
 }
 
-const twitRandomText = generator => {
-  const text = generator.generate()
-  const cleanText = striptags(text, [], '\n')
-    .replace(/\n+/g, '\n')
-    .replace(/ +/g, ' ')
+const generateUntilTwittable = generator => {
+  let cleanText
+  let times = 1
 
-  if (!isTwittable(cleanText)) {
-    console.log('Text generated too long:', cleanText)
+  do {
+
+    times++
+    cleanText = striptags(generator.generate(), [], '\n').replace(/\n+/g, '\n').replace(/ +/g, ' ')
+
+  } while (!isTwittable(cleanText) && times < MAX_RETRIES)
+
+  if (times === MAX_RETRIES) {
+    throw new Error(`Generator made too long texts after ${MAX_RETRIES} retries`)
+  }
+
+  if (times > 1) {
+    console.log(`Got one after ${times} times`)
+  }
+
+  return cleanText
+}
+
+const twitRandomText = cleanText => new Promise((resolve, reject) => {
+
+  if (process.env.DRY_RUN) {
+    console.log(`This would tweet: \n\t${cleanText}`)
     return
   }
 
@@ -64,14 +85,16 @@ const twitRandomText = generator => {
   T.post('statuses/update', {status: cleanText}, (err, data) => {
     if (err) {
       console.error('Error twitting:', err)
-      return
+      return reject(err)
     }
 
     console.log(`Published tweet ${data.id_str}. done!`, data.text)
+    return resolve()
   })
-}
+})
 
 Promise.resolve(pick(TWITTER_GENERATORS))
   .then(loadGenerator)
+  .then(generateUntilTwittable)
   .then(twitRandomText)
   .catch(console.error)
