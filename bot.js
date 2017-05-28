@@ -14,7 +14,8 @@ const TWITTER_GENERATORS = [
   'ryhpUxVH', // Presagios
   'rJZnFG74', // Destinos misticos
   'Hk8Z2R9S', // Simbolos extraños
-  'rkdh21CR' // Garitos
+  'rkdh21CR', // Garitos
+  'ryCnVMOb-' // Tramas cortas
 ]
 
 const pick = arr => arr[Math.floor(Math.random() * arr.length)]
