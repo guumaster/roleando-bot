@@ -18,12 +18,12 @@ const TWITTER_GENERATORS = [
   'Hk8Z2R9S',  // Simbolos extraños
   'rkdh21CR',  // Garitos
   'ryCnVMOb-', // Tramas cortas
-  'r1wBUHu-Z'  // Secretos locales
+  'Hk_5n7Obb', // Oraculo
 ]
 
 const pick = arr => arr[Math.floor(Math.random() * arr.length)]
 
-const isTwittable = str => str.length <= 140
+const isTwittable = str => str.length <= 280
 
 const loadGenerator = id => {
   console.log(`Loading generator: ${id}`)
