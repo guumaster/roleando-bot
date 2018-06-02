@@ -15,7 +15,11 @@ module.exports = {
     tramas: ['trama', 'plot'],
     oraculo: ['oraculo'],
     sombrio: ['sitio', 'sitio sombrio'],
-    aventura: ['aventura', 'semilla'] 
+    aventura: ['aventura', 'semilla'],
+    libro: [ 'libro', 'biblioteca' ],
+    terror: [ 'terror' ],
+    naves: [ 'naves', 'nave', 'nombre nave' ],
+    secretos: [ 'secreto', 'rumores' ],
   },
   generators: {
     profecias: 'BytfSUVS',  // Profecias
@@ -28,7 +32,12 @@ module.exports = {
     tramas: 'ryCnVMOb-', // Tramas cortas
     oraculo: 'Hk_5n7Obb', // Oraculo
     sombrio: 'Hk2B_7fE', // Sitio sombrio
-    aventura: 'H1JTSHyN' // Aventura
+    aventura: 'H1JTSHyN', // Aventura
+    libro: 'Skap_rX4', // Libros
+    terror: 'BJ3dsM2V', // Semilla de terror
+    tesoros: 'ryQk55nV', // Cazadores de tesoro
+    naves: 'BkRHUH96x', // Nombre de naves
+    secretos: 'r1wBUHu-Z', // Secretos locales
   },
   twitter: {
     consumer_key: process.env.BOT_CONSUMER_KEY,
