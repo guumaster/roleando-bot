@@ -39,10 +39,10 @@ const generateUntilTwittable = (generator, extra) => {
   let times = 0
 
   do {
-
     times++
-    cleanText = striptags(generator.generate(), [], '\n').replace(/\n+/g, '\n').replace(/ +/g, ' ')
-
+    cleanText = generator.generate()
+    cleanText = striptags(cleanText, '<strong>', '\n').replace(/\n+/g, '\n').replace(/ +/g, ' ')
+    cleanText = striptags(cleanText, [], '')
   } while (!isTwittable(`${cleanText}\n${extra}`) && times < MAX_RETRIES)
 
   if (times === MAX_RETRIES) {

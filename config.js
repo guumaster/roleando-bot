@@ -13,7 +13,8 @@ module.exports = {
     simbolos: ['simbolo', 'simbolo extraño'],
     garitos: ['garito', 'posada', 'taverna'],
     tramas: ['trama', 'plot'],
-    oraculo: ['oraculo']
+    oraculo: ['oraculo'],
+    aventura: ['aventura', 'semilla'] 
   },
   generators: {
     profecias: 'BytfSUVS',  // Profecias
@@ -24,7 +25,8 @@ module.exports = {
     simbolos: 'Hk8Z2R9S',  // Simbolos extraños
     garitos: 'rkdh21CR',  // Garitos
     tramas: 'ryCnVMOb-', // Tramas cortas
-    oraculo: 'Hk_5n7Obb' // Oraculo
+    oraculo: 'Hk_5n7Obb', // Oraculo
+    aventura: 'H1JTSHyN' // Aventura
   },
   twitter: {
     consumer_key: process.env.BOT_CONSUMER_KEY,
