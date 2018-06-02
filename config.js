@@ -14,6 +14,7 @@ module.exports = {
     garitos: ['garito', 'posada', 'taverna'],
     tramas: ['trama', 'plot'],
     oraculo: ['oraculo'],
+    sombrio: ['sitio', 'sitio sombrio'],
     aventura: ['aventura', 'semilla'] 
   },
   generators: {
@@ -26,6 +27,7 @@ module.exports = {
     garitos: 'rkdh21CR',  // Garitos
     tramas: 'ryCnVMOb-', // Tramas cortas
     oraculo: 'Hk_5n7Obb', // Oraculo
+    sombrio: 'Hk2B_7fE', // Sitio sombrio
     aventura: 'H1JTSHyN' // Aventura
   },
   twitter: {
