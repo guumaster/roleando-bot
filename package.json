@@ -1,16 +1,11 @@
 {
-  "name": "roleando-bot",
+  "name": "roleando-bot-scheduler",
   "version": "1.0.0",
   "description": "Un bot para inventar historias",
   "main": "bot.js",
-  "scripts": {
-    "start": "echo \"nothing\"",
-    "try": "DRY_RUN=1 node bot",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/guumaster/roleando-bot.git"
+    "url": "git+ssh://git@github.com/guumaster/roleando-bot-scheduler.git"
   },
   "keywords": [
     "bot",
@@ -21,14 +16,11 @@
   "author": "guumaster",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/guumaster/roleando-bot/issues"
+    "url": "https://github.com/guumaster/roleando-bot-scheduler/issues"
   },
-  "homepage": "https://github.com/guumaster/roleando-bot#readme",
+  "homepage": "https://github.com/guumaster/roleando-bot-scheduler#readme",
   "dependencies": {
-    "@guumaster/rpgen": "1.2.2",
-    "axios": "0.16.1",
-    "dotenv": "4.0.0",
-    "striptags": "3.0.1",
-    "twit": "2.2.5"
+    "axios": "0.18.0",
+    "dotenv": "6.0.0"
   }
 }
