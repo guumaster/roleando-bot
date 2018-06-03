@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Un bot para inventar historias",
   "main": "bot.js",
+  "scripts": {
+    "start": "echo \"just a cron\""
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/guumaster/roleando-bot-scheduler.git"
