@@ -10,7 +10,7 @@ const run = async () => {
     headers: {
       'x-admin-token': process.env.ADMIN_TOKEN
     },
-    url: 'https://roleando-botserver.now.sh/_internal/tweet'
+    url: 'https://botserver.rolodromo.com/_internal/tweet'
   })
   console.log(`✔︎ Tweet sent`)
 }
