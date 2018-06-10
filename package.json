@@ -1,14 +1,14 @@
 {
-  "name": "roleando-bot-scheduler",
+  "name": "heroku-cron-scheduler",
   "version": "1.0.0",
-  "description": "Un bot para inventar historias",
+  "description": "Cron scheduler for Rolodromo.com",
   "main": "bot.js",
   "scripts": {
     "start": "echo \"just a cron\""
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/guumaster/roleando-bot-scheduler.git"
+    "url": "git+ssh://git@github.com/rolodromo/heroku-cron-scheduler.git"
   },
   "keywords": [
     "bot",
@@ -19,9 +19,9 @@
   "author": "guumaster",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/guumaster/roleando-bot-scheduler/issues"
+    "url": "https://github.com/rolodromo/heroku-cron-scheduler/issues"
   },
-  "homepage": "https://github.com/guumaster/roleando-bot-scheduler#readme",
+  "homepage": "https://github.com/guumaster/heroku-cron-scheduler#readme",
   "dependencies": {
     "axios": "0.18.0",
     "dotenv": "6.0.0"
