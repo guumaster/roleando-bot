@@ -1,9 +1,11 @@
-# Heroku Cron Scheduler
+~~# Heroku Cron Scheduler~~
 
-This project is deployed to Heroku and run scripts with the scheduler.
+~~This project is deployed to Heroku and run scripts with the scheduler.~~
 
-## Scripts
+~~## Scripts
 
-- Hourly tweet as [@roleandobot](https://twitter.com/roleandobot)
+~~- Hourly tweet as [@roleandobot](https://twitter.com/roleandobot)~~
 
-Random text is extracted from [Roleando WebApp](https://roleando.herokuapp.com/generadores/)
+~~Random text is extracted from [Roleando WebApp](https://roleando.herokuapp.com/generadores/)~~
+
+# DEPRECATED IN FAVOR OF [rolodromo/cronbox](https://github.com/rolodromo/cronbox)
